@@ -69,7 +69,7 @@ func genSQL(ctx *context.Context, count bool, tagInfo dto.SearchTag, keyword str
 		limit = 10
 	}
 
-	sql += " order by e.id desc"
+	sql += "group by e.id, ue.is_read order by e.id desc"
 
 	if limit < 10000 {
 		sql += fmt.Sprintf(" LIMIT %d OFFSET %d ", limit, offset)

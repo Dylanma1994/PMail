@@ -1,4 +1,4 @@
-build: build_fe build_server telegram_push web_push wechat_push package
+build: build_fe build_server telegram_push wechat_push package
 
 clean:
 	rm -rf output
